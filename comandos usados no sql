@@ -1,0 +1,13 @@
+
+create database if not exists dbprojeto;
+use dbprojeto;
+
+create table if not exists tbusuario (
+    pkusuario int not null primary key auto_increment,
+    nome varchar (60),
+    email varchar (40) unique not null,
+    senha varchar (40) not null,
+    datanasc date,
+    ativo boolean default true,
+    image BLOB(5242880)
+);
